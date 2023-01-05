@@ -184,7 +184,7 @@ specialPythagoreanTriplet = head [a * b * c | a <- [ 1..quot n 3 ], b <- [ a..qu
 -- The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 -- Find the sum of all the primes below two million.
 
-primesSum = go [2 .. 100000] 0 0
+primesSum = go [2 .. 2000000] 0 0
     where go a n r
            | length a <= n = r
            | otherwise = go ([ x | x <- a, isToDel x (a !! n)]) (n + 1) (r + a !! n)
